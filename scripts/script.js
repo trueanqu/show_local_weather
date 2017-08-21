@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    addUnitsSwitcher();
     getLocation();
 });
 
@@ -27,18 +27,17 @@ function getWeather(position) {
 }
 
 function showWeather(weatherData) {
-    $("#city").text(weatherData.name);
+    $("#city").html(' <i class="fa fa-map-marker" aria-hidden="true"></i> ' + weatherData.name);
     $("#icon").append('<img src="' + weatherData.weather[0].icon + '" alt="weather_icon"/>');
-    currentTempC = weatherData.main.temp;
-    currentTempF = (weatherData.main.temp * 9 / 5 ) + 32;
+    currentTempC = Math.round(weatherData.main.temp);
+    currentTempF = Math.round((weatherData.main.temp * 9 / 5 ) + 32);
     $("#tempC").html(currentTempC + "<a class='units'> °C</a>");
     $("#tempF").html(currentTempF + "<a class='units'> °F</a>").attr("hidden", true);
-    addUnitsSwitcher();
     $("#weather-main").text(weatherData.weather[0].main + " (" + weatherData.weather[0].description + ").");
 }
 
 function addUnitsSwitcher() {
-    $(".units").on("click", function () {
+    $("#tempC, #tempF").on("click", function () {
         if (!$("#tempF").attr("hidden")) {
             $("#tempF").attr("hidden", true);
             $("#tempC").attr("hidden", false);
