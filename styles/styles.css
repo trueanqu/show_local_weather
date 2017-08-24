@@ -1,0 +1,31 @@
+body {
+    font-family: "Arial Black";
+    user-select: none;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    background-color: black;
+    color: white;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+#tempC, #tempF {
+    font-size: 2em;
+    height: inherit;
+}
+
+#tempC:hover, #tempF:hover {
+    background-color: #070707;
+    cursor: pointer;
+}
+
+#weather-main {
+    padding-top: 2%;
+    color: darkgray;
+    font-family: Arial;
+}
+
+img {
+    filter: grayscale(100%) brightness(150%);
+}

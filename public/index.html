@@ -18,16 +18,25 @@
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="../styles/styles.css" rel="text/stylesheet"/>
+    <link href="../styles/styles.css" rel="stylesheet"/>
     <script src="../scripts/script.js"></script>
 </head>
 <body>
 <div class="container">
-    <div class="page-header"><h3>Showing local weather for <span id="city">... </span>:</h3></div>
-    <div id="icon"></div>
-    <div id="tempC"></div>
-    <div id="tempF"></div>
-    <div id="weather-main"></div>
+    <header class="page-header"><h3>Showing local weather for <span id="city">... </span>:</h3></header>
+    <section class="row">
+        <figure class="col-md-offset-2 col-md-4">
+            <div id="icon"></div>
+            <figcaption>
+                <div id="weather-main"></div>
+            </figcaption>
+        </figure>
+        <aside class="col-md-4">
+            <div id="tempC"></div>
+            <div id="tempF"></div>
+
+        </aside>
+    </section>
 </div>
 </body>
 </html>
