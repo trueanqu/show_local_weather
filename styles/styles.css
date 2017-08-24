@@ -29,3 +29,7 @@ body {
 img {
     filter: grayscale(100%) brightness(150%);
 }
+
+#city {
+    color: gray;
+}
